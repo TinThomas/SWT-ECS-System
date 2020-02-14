@@ -11,18 +11,31 @@ namespace HeaterUnitTest
     [TestFixture]
     public class HeaterUnitTest
     {
-        private IHeater uut;
+        private IHeater _uut;
 
         [SetUp]
         public void SetUp()
         {
-            uut = new HeaterFake();
+            _uut = new HeaterFake();
         }
 
         [Test]
-        public void test()
+        public void TurnOn_Void_Void()
         {
+            _uut.TurnOn();
+        }
 
+        [Test]
+        public void TurnOff_Void_Void()
+        {
+            _uut.TurnOff();
+        }
+
+        [Test]
+        public void RunSelfTest_Void_True()
+        {
+            var result = _uut.RunSelfTest();
+            Assert.AreEqual(true, result);
         }
     }
 }
