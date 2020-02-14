@@ -38,6 +38,10 @@ namespace ECSUnitTest
             Assert.That(uut.GetThreshold(), Is.EqualTo(a));
         }
 
+        [Test]
+        public void Regulate_Threshold10_TurnOn()
+        {
 
+        }
     }
 }
