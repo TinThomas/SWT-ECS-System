@@ -11,6 +11,7 @@
             ecs.SetThreshold(20);
 
             ecs.Regulate();
+            System.Console.ReadKey();
         }
     }
 }
