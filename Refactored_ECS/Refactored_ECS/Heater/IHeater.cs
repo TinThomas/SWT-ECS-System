@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Refactored_ECS.Heater
 {
-    interface IHeater
+    public interface IHeater
     {
         void TurnOn();
         void TurnOff();
