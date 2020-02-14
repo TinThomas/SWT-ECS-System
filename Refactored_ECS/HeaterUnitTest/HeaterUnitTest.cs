@@ -30,7 +30,7 @@ namespace HeaterUnitTest
         public void TurnOff_Void_Void()
         {
             var result = _uut.TurnOff();
-            Assert.AreEqual(true, result);
+            Assert.AreEqual(false, result);
         }
 
         [Test]

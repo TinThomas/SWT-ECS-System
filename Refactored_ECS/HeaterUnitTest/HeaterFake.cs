@@ -5,13 +5,16 @@ namespace HeaterUnitTest
 {
     public class HeaterFake : IHeater
     {
-        public void TurnOn()
+        private bool _heaterStatus = false;
+        public bool TurnOn()
         {
             Console.WriteLine("HeaterFake turned on");
+            return _heaterStatus = true;
         }
-        public void TurnOff()
+        public bool TurnOff()
         {
             Console.WriteLine("Heater fake turned off");
+            return _heaterStatus = false;
         }
 
         public bool RunSelfTest()
