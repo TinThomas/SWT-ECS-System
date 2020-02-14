@@ -48,7 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ECSUnitTest.cs" />
+    <Compile Include="HeaterFake.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TempSensorFake.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HeaterUnitTest\HeaterUnitTest.csproj">

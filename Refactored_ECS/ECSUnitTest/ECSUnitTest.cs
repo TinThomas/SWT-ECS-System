@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using HeaterUnitTest;
 using NUnit.Framework;
 using Refactored_ECS;
-using Refactored_ECS.Heater;
-using Refactored_ECS.TempSensor;
 using TempertureUnitTest;
 
 namespace ECSUnitTest
@@ -16,8 +14,8 @@ namespace ECSUnitTest
     public class ECSUnitTest
     {
         private ECS uut;
-        private IHeater heater;
-        private ITempSensor sensor;
+        private HeaterFake heater;
+        private TempSensorFake sensor;
 
         [SetUp]
         public void SetUp()
@@ -38,10 +36,51 @@ namespace ECSUnitTest
             Assert.That(uut.GetThreshold(), Is.EqualTo(a));
         }
 
-        [Test]
-        public void Regulate_Threshold10_TurnOn()
-        {
+        #region Regulate
 
+        [Test]
+        public void Regulate_Threshold30_True()
+        {
+            uut.SetThreshold(30);
+            uut.Regulate();
+            Assert.That(heater.HeaterStatus, Is.True);
+        }
+
+        [Test]
+        public void Regulate_Threshold20_False()
+        {
+            uut.SetThreshold(20);
+            uut.Regulate();
+            Assert.That(heater.HeaterStatus, Is.False);
+        }
+        [Test]
+        public void Regulate_ThresholdNegative10_False()
+        {
+            uut.SetThreshold(-20);
+            uut.Regulate();
+            Assert.That(heater.HeaterStatus, Is.False);
+        }
+        [Test]
+        public void Regulate_Threshold22_False()
+        {
+            uut.SetThreshold(22);
+            uut.Regulate();
+            Assert.That(heater.HeaterStatus, Is.False);
+        }
+        #endregion
+
+        [Test]
+        public void GetCurrentTemperature_22()
+        {
+            int res = uut.GetCurTemp();
+            Assert.That(res, Is.EqualTo(22));
+        }
+
+        [Test]
+        public void RunSelfTest_True()
+        {
+            bool res = uut.RunSelfTest();
+            Assert.That(res, Is.True);
         }
     }
 }

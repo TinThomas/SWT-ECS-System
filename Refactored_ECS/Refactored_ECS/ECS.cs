@@ -13,18 +13,16 @@
             _heater = heater;
         }
 
-        public bool Regulate()
+        public void Regulate()
         {
             var t = _tempSensor.GetTemp();
             if (t < _threshold)
             {
                 _heater.TurnOn();
-                return true;
             }
             else
             {
                 _heater.TurnOff();
-                return false;
             }
 
 
