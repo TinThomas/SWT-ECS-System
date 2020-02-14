@@ -11,7 +11,7 @@ namespace TempertureUnitTest
             return 22;
         }
 
-        public bool RunSelfTest_True()
+        public bool RunSelfTest()
         {
             Console.WriteLine("TempSensorFake running selftest");
             return true;

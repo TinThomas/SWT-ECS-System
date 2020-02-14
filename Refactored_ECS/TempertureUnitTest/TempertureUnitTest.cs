@@ -11,19 +11,19 @@ namespace TempertureUnitTest
     [TestFixture]
     public class TempertureUnitTest
     {
-        private TempertureUnitTest uut;
+        private TempSensorFake uut;
 
         [SetUp]
         public void SetUp()
         {
-            uut = new TempertureUnitTest();
+            uut = new TempSensorFake();
         }
 
         [Test]
         public void test_GetTemp()
         {
             var result = uut.GetTemp();
-            Assert.AreEqual(true, result);
+            Assert.AreEqual(22, result);
         }
 
         [Test]
