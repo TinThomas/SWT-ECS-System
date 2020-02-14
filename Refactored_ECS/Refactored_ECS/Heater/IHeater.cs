@@ -8,8 +8,8 @@ namespace Refactored_ECS.Heater
 {
     public interface IHeater
     {
-        void TurnOn();
-        void TurnOff();
+        bool TurnOn();
+        bool TurnOff();
         bool RunSelfTest();
     }
 }

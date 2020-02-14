@@ -51,9 +51,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HeaterUnitTest\HeaterUnitTest.csproj">
+      <Project>{df7792de-695a-46cf-9bf6-e555456288e3}</Project>
+      <Name>HeaterUnitTest</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Refactored_ECS\Refactored_ECS.csproj">
       <Project>{07e24f69-c826-445f-a7fc-c7be1a062028}</Project>
       <Name>Refactored_ECS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TempertureUnitTest\TempertureUnitTest.csproj">
+      <Project>{2c0d2645-036c-4005-8029-e57eba9cb0f3}</Project>
+      <Name>TempertureUnitTest</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

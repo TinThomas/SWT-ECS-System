@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Refactored_ECS.Heater;
 
-namespace Refactored_ECS.Heater
+namespace HeaterUnitTest
 {
-    class HeaterFake : IHeater
+    public class HeaterFake : IHeater
     {
         public void TurnOn()
         {

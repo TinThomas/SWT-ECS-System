@@ -22,13 +22,15 @@ namespace HeaterUnitTest
         [Test]
         public void TurnOn_Void_Void()
         {
-            _uut.TurnOn();
+            var result = _uut.TurnOn();
+            Assert.AreEqual(true, result);
         }
 
         [Test]
         public void TurnOff_Void_Void()
         {
-            _uut.TurnOff();
+            var result = _uut.TurnOff();
+            Assert.AreEqual(true, result);
         }
 
         [Test]
