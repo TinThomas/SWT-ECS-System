@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Refactored_ECS.TempSensor;
 
-namespace Refactored_ECS.TempSensor
+namespace TempertureUnitTest
 {
-    class TempSensorFake : ITempSensor
+    public class TempSensorFake : ITempSensor
     {
         public int GetTemp()
         {
