@@ -14,7 +14,7 @@ namespace Refactored_ECS.TempSensor
             return 22;
         }
 
-        public bool RunSelfTest()
+        public bool RunSelfTest_True()
         {
             Console.WriteLine("TempSensorFake running selftest");
             return true;
